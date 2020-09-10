@@ -5,12 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<form th:action="@{/upload}" method="post">
-    <div>
-        <label>
-            file name : <input type="text" name="fileName">
-        </label>
-    </div>
+<form action="/document/upload" method="post" enctype="multipart/form-data">
     <div>
         <label>
             file

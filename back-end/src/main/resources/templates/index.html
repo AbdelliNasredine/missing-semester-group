@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Archive | MS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: dodgerblue;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        table {
+            border-collapse: collapse;
+            border: 2px solid #000000;
+        }
+        th, td {
+            border: 1px solid rgba(0,0,0,.2);
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Missing Semester's File Archive</h2>
+    <p>
+        upload a new file here <a href="/document/upload">upload</a>
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="d : ${documents}">
+                <td th:text="${d.id}"></td>
+                <td th:text="${d.name}"></td>
+                <td th:text="${d.type}"></td>
+                <td>
+                    <a th:href="@{'/document/download/'+${d.id}}">download</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
