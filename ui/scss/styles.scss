@@ -1,0 +1,10 @@
+$bg-color: #f4A;
+$bg-color-hover: #f4f;
+
+body {
+  background-color: $bg-color;
+
+  &:hove {
+    background-color: $bg-color-hover;
+  }
+}

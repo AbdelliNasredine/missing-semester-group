@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"../scss/styles.scss"
+	],
+	"sourcesContent": [
+		"$bg-color: #f4A;\r\n$bg-color-hover: #f4f;\r\n\r\nbody {\r\n  background-color: $bg-color;\r\n\r\n  &:hove {\r\n    background-color: $bg-color-hover;\r\n  }\r\n}"
+	],
+	"names": [],
+	"mappings": "AAGA,AAAA,IAAI,CAAC;EACH,gBAAgB,EAJP,IAAI;CASd;;AAND,AAGE,IAHE,AAGD,KAAK,CAAC;EACL,gBAAgB,EANH,IAAI;CAOlB"
+}
