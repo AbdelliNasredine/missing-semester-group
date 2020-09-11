@@ -1,0 +1,30 @@
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-head);
+  font-weight: bold;
+  font-style: normal;
+  color: var(--h-color);
+  margin-bottom: .5em;
+}
+
+p,
+span {
+  font-family: var(--font-body);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page-title {
+  font-size: 2.5em;
+  border-bottom: var(--h-border);
+}
+
+.page-paragraph {
+  font-size: 1.2em;
+  margin: 1em 0 1.5em 0;
+}

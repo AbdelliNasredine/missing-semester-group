@@ -4,9 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="dist/css/styles.css" />
+    <!-- icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      .placeholder-icon {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .placeholder-icon.small {
+        width: 12px;
+        height: 12px;
+      }
+      .placeholder-card {
+        padding: 5em;
+        /* background-color: var(--nav-bg); */
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <!-- top menu -->
+    <div class="topmenu">
+      <a href="#" class="item login"> Login </a>
+    </div>
+    <!-- left menu -->
+    <nav class="sidenav">
+      <a class="item logo" href="#">
+        <i class="placeholder-icon"></i>
+        MSFA
+      </a>
+      <a class="item" href="#">
+        <i class="material-icons">search</i>
+        Search
+      </a>
+      <a class="item" href="#">
+        <i class="material-icons">book</i>
+        Courses
+      </a>
+      <a class="item last" href="#">
+        <i class="material-icons">logout</i>
+        Logout
+      </a>
+    </nav>
+    <!-- main content -->
+    <main class="main">
+      <header>
+        <h1 class="page-title">Welcome To MSFA</h1>
+        <p class="page-paragraph">
+          MSFA (Missing Semester File Archive) is a platform where Computer
+          Science (MI) students can find & share study resources and documents
+        </p>
+      </header>
+      <section>
+        <h4><i class="placeholder-icon small"></i>Navigate</h4>
+        <div class="grid grid-3">
+          <a class="card" href="#">
+            <i class="material-icons">folder</i>
+            MSIR - Master System Information et Réseaux
+          </a>
+          <a class="card" href="#">
+            <i class="material-icons">folder</i>
+            MSIA - Master System Information Avancé
+          </a>
+          <a class="card" href="#">
+            <i class="material-icons">folder</i>
+            MIAD - Master Intelligence Artificial et Discisons
+          </a>
+          <a class="card" href="#">
+            <i class="material-icons">folder</i>
+            1LMI - 1er années MI
+          </a>
+          <a class="card" href="#">
+            <i class="material-icons">folder</i>
+            2LMI - 2er années MI
+          </a>
+          <a class="card" href="#">
+            <i class="material-icons">folder</i>
+            3LMI - 3er années MI
+          </a>
+        </div>
+      </section>
+      <footer>
+        <span>Copyright © 2020 MSFA</span><br />
+        <span>Made by <a href="#">Abdelli Nasredine</a></span>
+      </footer>
+    </main>
   </body>
 </html>

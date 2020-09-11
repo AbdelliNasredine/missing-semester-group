@@ -1,11 +1,7 @@
 @import "./reset";
-@import "./variables";
 @import "./global";
-
-body {
-  background-color: $bg-color;
-
-  &:hove {
-    background-color: $bg-color-hover;
-  }
-}
+@import "./typography";
+@import "./menus";
+@import "./grid";
+@import "./cards";
+@import "./animations";
