@@ -1,5 +1,6 @@
-$bg-color: #f4A;
-$bg-color-hover: #f4f;
+@import "./reset";
+@import "./variables";
+@import "./global";
 
 body {
   background-color: $bg-color;

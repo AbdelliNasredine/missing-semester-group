@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/styles.scss dist/styles.css"
+    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/styles.scss dist/styles.css",
+    "dev-serve": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js'",
+    "dev": "npm run compile-styles && npm run dev-serve"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^2.26.12",
     "node-sass": "^4.14.1"
   }
