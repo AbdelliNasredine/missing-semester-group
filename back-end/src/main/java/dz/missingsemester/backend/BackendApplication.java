@@ -10,4 +10,9 @@ public class BackendApplication {
         SpringApplication.run(BackendApplication.class, args);
     }
 
+//    @Bean
+//    LayoutDialect layoutDialect(){
+//        return new LayoutDialect();
+//    }
+
 }

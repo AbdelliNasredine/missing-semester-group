@@ -1,6 +1,6 @@
 package dz.missingsemester.backend.controllers;
 
-import dz.missingsemester.backend.services.DocumentService;
+import dz.missingsemester.backend.services.BasicDocumentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class HomeController {
 
-    private final DocumentService documentService;
+    private final BasicDocumentService basicDocumentService;
 
-    public HomeController(DocumentService documentService) {
-        this.documentService = documentService;
+    public HomeController(BasicDocumentService basicDocumentService) {
+        this.basicDocumentService = basicDocumentService;
     }
 
     @GetMapping({"index", ""})
     public String index(Model model){
-        model.addAttribute("documents", documentService.getAll());
-        return "index";
+//        model.addAttribute("documents", basicDocumentService.getAll());
+        return "management/index";
     }
 }

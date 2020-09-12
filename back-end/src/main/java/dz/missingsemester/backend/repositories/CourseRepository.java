@@ -1,4 +1,7 @@
 package dz.missingsemester.backend.repositories;
 
-public interface CourseRepository {
+import dz.missingsemester.backend.models.Course;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CourseRepository extends JpaRepository<Course, Long> {
 }

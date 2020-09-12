@@ -1,26 +1,58 @@
 package dz.missingsemester.backend.models;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.time.LocalDate;
 
 @Entity
-public class Document {
+public class Document implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
     private String type;
-
+    @ManyToOne
+    private Course course;
     @Lob
     private byte[] data;
+    private LocalDate createdAt;
+    private LocalDate updateAt;
 
     protected Document() {
     }
 
-    public Document(String name, String type, byte[] data) {
+    @PrePersist
+    private void beforePersist(){
+        this.createdAt = LocalDate.now();
+        this.updateAt = LocalDate.now();
+    }
+
+    @PreUpdate
+    private void beforeUpdate(){
+        this.updateAt = LocalDate.now();
+    }
+
+    public Document(String name, String type, byte[] data, Course course) {
         this.name = name;
         this.type = type;
         this.data = data;
+        this.course = course;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
+    public LocalDate getCreatedAt() {
+        return createdAt;
+    }
+
+    public LocalDate getUpdateAt() {
+        return updateAt;
     }
 
     public Long getId() {
