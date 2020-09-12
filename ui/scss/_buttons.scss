@@ -1,0 +1,21 @@
+.btn {
+  padding: .5em 1em;
+  font-family: var(--font-body);
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &.btn-primary {
+    background-color: var(--blue);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--blue-light);
+    }
+  }
+
+  &.disabled {
+    background-color: var(--nav-bg);
+  }
+}

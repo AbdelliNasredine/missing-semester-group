@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/css/styles.css" />
+    <!-- icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      .placeholder-icon {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .placeholder-icon.small {
+        width: 12px;
+        height: 12px;
+      }
+      .placeholder-card {
+        padding: 5em;
+        /* background-color: var(--nav-bg); */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- top menu -->
+    <div class="topmenu">
+      <a href="#" class="item login"> Login </a>
+    </div>
+    <!-- left menu -->
+    <nav class="sidenav">
+      <a class="item logo" href="#">
+        <i class="placeholder-icon"></i>
+        MSFA
+      </a>
+      <a class="item" href="#">
+        <i class="material-icons">search</i>
+        Search
+      </a>
+      <a class="item" href="#">
+        <i class="material-icons">book</i>
+        Courses
+      </a>
+      <a class="item last" href="#">
+        <i class="material-icons">logout</i>
+        Logout
+      </a>
+    </nav>
+    <!-- main content -->
+    <main class="main">
+      <section class="bg-dark-shadow p-1 w-50 mx-auto">
+        <form action="/">
+          <div class="form-group">
+            <label> username </label>
+            <input class="form-input" type="text" />
+          </div>
+          <div class="form-group">
+            <label> password </label>
+            <input class="form-input" type="password" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Login</button>
+          </div>
+        </form>
+      </section>
+      <footer>
+        <span>Copyright © 2020 MSFA</span><br />
+        <span>Made by <a href="#">Abdelli Nasredine</a></span>
+      </footer>
+    </main>
+  </body>
+</html>

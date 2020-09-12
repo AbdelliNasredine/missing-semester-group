@@ -1,0 +1,20 @@
+// padding util
+.p-1 {
+  padding: 1em;
+}
+
+// margin util 
+.mx-auto {
+  margin: 0 auto;
+}
+
+// color & bg utils
+.bg-dark-shadow {
+  background-color: var(--background);
+  box-shadow: var(--toc-shadow);
+}
+
+// width & height utils
+.w-50 {
+  width: 50%;
+}

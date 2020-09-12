@@ -1,0 +1,27 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  input {
+    flex: 1;
+    font-family: var(--font-body);
+  }
+
+  label {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}
+
+.form-input {
+  padding: .5em;
+  color: #fff;
+  font-size: 1em;
+  background-color: var(--nav-bg);
+  border-bottom: 4px solid var(--gray3);
+
+  &:focus {
+    border-bottom: 4px solid var(--blue);
+  }
+}
