@@ -2,9 +2,11 @@ package dz.missingsemester.backend.services;
 
 import dz.missingsemester.backend.models.EducationLevel;
 import dz.missingsemester.backend.repositories.EducationLevelRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class EducationLevelService {
     private final EducationLevelRepository educationLevelRepository;
 
@@ -18,5 +20,9 @@ public class EducationLevelService {
 
     public List<EducationLevel> getAllLevels(){
         return educationLevelRepository.findAll();
+    }
+
+    public EducationLevel save(EducationLevel educationLevel){
+        return educationLevelRepository.save(educationLevel);
     }
 }

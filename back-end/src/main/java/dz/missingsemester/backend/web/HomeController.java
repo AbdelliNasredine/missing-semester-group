@@ -1,4 +1,4 @@
-package dz.missingsemester.backend.controllers;
+package dz.missingsemester.backend.web;
 
 import dz.missingsemester.backend.services.BasicDocumentService;
 import org.springframework.stereotype.Controller;
