@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-styles": "gulp style",
+    "bundle-js": "gulp js",
     "dev": "gulp watch"
   },
   "author": "",
@@ -15,6 +16,7 @@
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.1"
   }
 }
