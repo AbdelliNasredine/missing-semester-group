@@ -4,7 +4,6 @@ import dz.missingsemester.backend.models.Course;
 import dz.missingsemester.backend.models.Document;
 import dz.missingsemester.backend.repositories.CourseRepository;
 import dz.missingsemester.backend.repositories.DocumentRepository;
-import dz.missingsemester.backend.repositories.EducationLevelRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -14,16 +13,14 @@ import java.util.List;
 @Service
 public class BasicDocumentService implements DocumentService{
     private final DocumentRepository documentRepository;
-    private final EducationLevelRepository educationLevelRepository;
     private final CourseRepository courseRepository;
 
-    public BasicDocumentService(DocumentRepository documentRepository, EducationLevelRepository educationLevelRepository, CourseRepository courseRepository) {
+    public BasicDocumentService(DocumentRepository documentRepository, CourseRepository courseRepository) {
         this.documentRepository = documentRepository;
-        this.educationLevelRepository = educationLevelRepository;
         this.courseRepository = courseRepository;
     }
 
-    private Document saveOne(MultipartFile file, Course course) throws IOException {
+    public Document saveOne(MultipartFile file, Course course) throws IOException {
         String name = file.getOriginalFilename();
         String type = file.getContentType();
         byte[] data = file.getBytes();
@@ -46,5 +43,10 @@ public class BasicDocumentService implements DocumentService{
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public List<Document> findAll() {
+        return documentRepository.findAll();
     }
 }

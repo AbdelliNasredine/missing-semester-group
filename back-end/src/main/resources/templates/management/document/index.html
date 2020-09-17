@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{template.html}" lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Documents </title>
+    <style>
+        table{
+            border: 2px solid #000000;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #000000;
+        }
+    </style>
 </head>
 <body>
+<hr>
+<h1>Documents</h1>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>document name</th>
+        <th>type</th>
+        <th>course</th>
+        <th>eduction level</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="doc : ${documents}">
+        <td th:text="${doc.id}"></td>
+        <td th:text="${doc.name}"></td>
+        <td th:text="${doc.type}"></td>
+        <td th:text="${doc.course.name}"></td>
+        <td th:text="${doc.course.level.name}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

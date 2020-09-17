@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
-<form action="/" method="post" enctype="multipart/form-data">
+<form th:action="@{/management/document/upload}" method="post" enctype="multipart/form-data">
     <h1>Upload a document</h1>
     <label>
         course :
-        <select name="course">
+        <select name="course" required>
             <option th:each="c : ${courses}" th:value="${c.id}" th:text="${c.name}"></option>
         </select>
     </label>
+    <br>
     <label>
         files :
-        <input multiple type="file" name="file">
+        <input type="file" name="files" multiple required>
     </label>
+    <br>
     <input type="submit" value="upload">
 </form>
 </body>
